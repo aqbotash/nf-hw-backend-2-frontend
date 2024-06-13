@@ -1,7 +1,7 @@
 import axios from "axios";
 import { API_URL } from "../routes";
 
-const API_URLUrl = process.env.REACT_APP_API_URL;
+const API_URLUrl = process.env.REACT_APP_API_URL || 'http://localhost:8080/api';
 
 const getRefreshToken = async () => {
   const id = JSON.parse(sessionStorage.getItem("user") || "")?.id;
